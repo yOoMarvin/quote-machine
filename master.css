@@ -2,11 +2,28 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+footer{
+  font-size: 18px;
+  color: #f6f6f6;
+  margin-left: 20px;
+  bottom: 0;
+  width: 100%
+  position: fixed;
+}
+
+a{
+  color:#f6f6f6;
+}
+
+a:hover{
+  color: #202020;
+}
+
 #quote-box{
     width: 70%;
     margin-top: 180px;
     border-radius: 5px;
-    background: white;
+    background: #f6f6f6;
 }
 
 #quote-text{
@@ -26,7 +43,7 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    color: white;
+    color: #f6f6f6;
     font-size: 16px;
 }
 
@@ -35,6 +52,6 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
-    color: white;
+    color: #f6f6f6;
     font-size: 16px;
 }
