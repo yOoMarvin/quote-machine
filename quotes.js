@@ -1,13 +1,24 @@
+var key = config.KEY
+
 $(document).ready(function() {
   generate();
 });
 
 function generate(){
-  $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?",
-  function(data){
-    $("#quote-text").html(data.quoteText);
-    $("#quote-author").html("- " + data.quoteAuthor);
-    $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=' + data.quoteText + " - " + data.quoteAuthor);
+  $.ajax({
+    url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous",
+    type: "POST",
+    data: {},
+    dataType: "json",
+    success: function(data) {
+      $("#quote-text").html(data.quote);
+      $("#quote-author").html("- " + data.author);
+      $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=' + data.quote + " - " + data.author);
+    },
+    error: function() { alert("boo! there was an error loading the quote ") },
+    beforeSend: function(xhr) {
+      xhr.setRequestHeader("X-Mashape-Key", key)
+    }
   });
 
   //random color:
