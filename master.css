@@ -23,12 +23,18 @@ body{
 
 #twitter-button{
     float: left;
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
     color: white;
+    font-size: 16px;
 }
 
 #quote-button{
     float: right;
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
     color: white;
+    font-size: 16px;
 }
