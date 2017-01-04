@@ -7,6 +7,7 @@ function generate(){
   function(data){
     $("#quote-text").html(data.quoteText);
     $("#quote-author").html("- " + data.quoteAuthor);
+    $("#twitter-link").attr("href", 'https://twitter.com/intent/tweet?text=' + data.quoteText + " - " + data.quoteAuthor);
   });
 
   //random color:
